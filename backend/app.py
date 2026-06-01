@@ -56,7 +56,15 @@ def history():
     rows = cursor.fetchall()
     conn.close()
 
-    return jsonify(rows)
+    history_list = []
+    for row in rows:
+        history_list.append({
+            "id": row[0],
+            "mood": row[1],
+            "created_at": row[2]
+        })
+
+    return jsonify(history_list)
 
 if __name__ == "__main__":
     app.run(debug=True)
