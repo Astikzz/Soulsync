@@ -249,7 +249,7 @@ def stats():
 
     return jsonify(stats_list)
 
-init_db()
+
 
 import os
 
