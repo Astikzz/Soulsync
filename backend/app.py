@@ -5,6 +5,10 @@ import sqlite3
 app = Flask(__name__)
 CORS(app)
 
+@app.route("/")
+def home():
+    return "SoulSync API Running"
+
 DB_NAME = "moods.db"
 
 
@@ -249,7 +253,7 @@ def stats():
 
     return jsonify(stats_list)
 
-
+init_db()
 
 import os
 
