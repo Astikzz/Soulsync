@@ -9,57 +9,102 @@
 <body>
 
     <div class="container">
+
         <h1>SoulSync</h1>
 
         <p class="tagline">
             No student should suffer in silence.
         </p>
 
+        <div class="auth-buttons">
+            <button onclick="openSignupModal()">Sign Up</button>
+            <button onclick="openLoginModal()">Login</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <p id="welcomeUser"></p>
+
         <div class="card">
             <h2>Anonymous Support</h2>
-            <p>
-                Share your feelings safely and anonymously.
-            </p>
+            <p>Share your feelings safely and anonymously.</p>
             <button>Talk Now</button>
         </div>
 
         <div class="card">
             <h2>Daily Mood Journal</h2>
-            <p>
-                Track emotions and understand your mental well-being.
-            </p>
-            <button>Write Journal</button>
+            <p>Track emotions and understand your mental well-being.</p>
+            <button onclick="openJournalModal()">Write Journal</button>
         </div>
 
+        <div class="card">
+            <h2>How are you feeling today?</h2>
+
+            <label><input type="radio" name="mood" value="sad"> Sad</label><br>
+            <label><input type="radio" name="mood" value="happy"> Happy</label><br>
+            <label><input type="radio" name="mood" value="lonely"> Lonely</label><br>
+            <label><input type="radio" name="mood" value="confused"> Confused</label><br><br>
+
+            <button onclick="analyzeMood()">Submit</button>
+
+            <p id="result"></p>
+        </div>
+
+        <div class="card">
+            <h2>Mood History</h2>
+            <button onclick="loadHistory()">View History</button>
+            <div id="history"></div>
+        </div>
+
+        <div class="card">
+            <h2>Mood Analytics</h2>
+            <button onclick="loadStats()">View Analytics</button>
+            <div id="stats"></div>
+        </div>
+
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignupModal()">&times;</span>
+            <h2>Sign Up</h2>
+
+            <input type="text" id="signupUsername" placeholder="Username"><br><br>
+            <input type="password" id="signupPassword" placeholder="Password"><br><br>
+
+            <button onclick="signup()">Sign Up</button>
+
+            <p id="signupResult"></p>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Login</h2>
+
+            <input type="text" id="loginUsername" placeholder="Username"><br><br>
+            <input type="password" id="loginPassword" placeholder="Password"><br><br>
+
+            <button onclick="login()">Login</button>
+
+            <p id="loginResult"></p>
+        </div>
+    </div>
+
+    <div id="journalModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeJournalModal()">&times;</span>
+            <h2>Daily Journal</h2>
+
+            <textarea id="journalText" placeholder="Write what you feel today..."></textarea><br><br>
+
+            <button onclick="saveJournal()">Save Journal</button>
+            <button onclick="loadJournals()">View Journals</button>
+
+            <div id="journals"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-<div class="card">
-  <h2>How are you feeling today?</h2>
-
-  <label>
-    <input type="radio" name="mood" value="sad">
-    Sad
-  </label><br>
-
-  <label>
-    <input type="radio" name="mood" value="happy">
-    Happy
-  </label><br>
-
-  <label>
-    <input type="radio" name="mood" value="lonely">
-    Lonely
-     </label><br>
-
-  <label>
-    <input type="radio" name="mood" value="confused">
-    confused
-  </label><br><br>
-
-  <button onclick="analyzeMood()">Submit</button>
-
-  <p id="result"></p>
-</div><label>
