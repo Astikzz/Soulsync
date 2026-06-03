@@ -7,7 +7,8 @@ CORS(app)
 
 @app.route("/")
 def home():
-    return "SoulSync API Running"
+    return "SoulSync Backend Running"
+
 
 DB_NAME = "moods.db"
 
@@ -53,10 +54,6 @@ CREATE TABLE IF NOT EXISTS journals (
 
 init_db()
 
-
-@app.route("/")
-def home():
-    return "SoulSync Backend Running"
 
 
 @app.route("/signup", methods=["POST"])
