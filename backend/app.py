@@ -119,16 +119,15 @@ def mood():
     if not user_id:
         return jsonify({"response": "Please login first"}), 401
 
-    conn = sqlite3.connect(DB_NAME)
-    cursor = conn.cursor()
+   # conn = sqlite3.connect(DB_NAME)
+    #cursor = conn.cursor()
+   # cursor.execute(
+   #     "INSERT INTO moods (user_id, mood) VALUES (?, ?)",
+    #    (user_id, mood_value)
+    #)
 
-    cursor.execute(
-        "INSERT INTO moods (user_id, mood) VALUES (?, ?)",
-        (user_id, mood_value)
-    )
-
-    conn.commit()
-    conn.close()
+    #conn.commit()
+    #conn.close()
 
     if mood_value == "sad":
         return jsonify({"response": "You seem sad 💙"})
