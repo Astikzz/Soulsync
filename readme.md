@@ -2,6 +2,11 @@
 
 AI-powered mental wellness platform for students.
 
+## Live Demo
+
+🌐 https://soulsync-nd5b.vercel.app
+
+
 ## Features
 
 - User Authentication (Signup/Login)
