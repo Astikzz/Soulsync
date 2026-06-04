@@ -59,7 +59,8 @@ function login() {
         if (data.user_id) {
             localStorage.setItem("soulsync_user_id", data.user_id);
             localStorage.setItem("soulsync_username", data.username);
-            document.getElementById("welcomeUser").innerHTML = "👋 Welcome, " + data.username;
+           document.getElementById("welcomeUser").innerText =
+"Logged in as " + username;
             closeLoginModal();
             location.reload();
         }
