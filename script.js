@@ -18,7 +18,7 @@ function signup() {
     let username = document.getElementById("signupUsername").value;
     let password = document.getElementById("signupPassword").value;
 
-    fetch("https://soulsync-production-df99.up.railway.app/signup", {
+    fetch("https://soulsync-rosy.vercel.app/signup", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -42,7 +42,7 @@ function login() {
     let username = document.getElementById("loginUsername").value;
     let password = document.getElementById("loginPassword").value;
 
-    fetch("https://soulsync-production-df99.up.railway.app/login", {
+    fetch("https://soulsync-rosy.vercel.app/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -91,7 +91,7 @@ function analyzeMood() {
         return;
     }
 
-    fetch("https://soulsync-production-df99.up.railway.app/mood", {
+    fetch("https://soulsync-rosy.vercel.app/mood", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -119,7 +119,7 @@ function loadHistory() {
         return;
     }
 
-    fetch("https://soulsync-production-df99.up.railway.app/history?user_id=" + userId)
+    fetch("https://soulsync-rosy.vercel.app/history?user_id=" + userId)
         .then(response => response.json())
         .then(data => {
             let historyDiv = document.getElementById("history");
@@ -148,7 +148,7 @@ function loadStats() {
         return;
     }
 
-    fetch("https://soulsync-production-df99.up.railway.app/stats?user_id=" + userId)
+    fetch("https://soulsync-rosy.vercel.app/stats?user_id=" + userId)
         .then(response => response.json())
         .then(data => {
             let statsDiv = document.getElementById("stats");
@@ -202,7 +202,7 @@ function saveJournal() {
         return;
     }
 
-    fetch("https://soulsync-production-df99.up.railway.app/journal", {
+    fetch("https://soulsync-rosy.vercel.app/journal", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -231,7 +231,7 @@ function loadJournals() {
         return;
     }
 
-    fetch("https://soulsync-production-df99.up.railway.app/journals?user_id=" + userId)
+    fetch("https://soulsync-rosy.vercel.app/journals?user_id=" + userId)
         .then(response => response.json())
         .then(data => {
             let journalsDiv = document.getElementById("journals");
@@ -272,7 +272,7 @@ function saveJournal() {
         return;
     }
 
-    fetch("https://soulsync-production-df99.up.railway.app/journal", {
+    fetch("https://soulsync-rosy.vercel.app/journal", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -301,7 +301,7 @@ function loadJournals() {
         return;
     }
 
-    fetch("https://soulsync-production-df99.up.railway.app/journals?user_id=" + userId)
+    fetch("https://soulsync-rosy.vercel.app/journals?user_id=" + userId)
         .then(response => response.json())
         .then(data => {
             let journalsDiv = document.getElementById("journals");
