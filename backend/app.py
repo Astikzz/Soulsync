@@ -9,7 +9,6 @@ CORS(app)
 def home():
     return "SoulSync Backend Running"
 
-
 DB_NAME = "moods.db"
 
 
